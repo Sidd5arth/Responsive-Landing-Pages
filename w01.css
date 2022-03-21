@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Play', sans-serif;
+}
+/* ######################### utility classes ###################### */
+.container{
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
+
+}
+/* ##################### navbar style ######################## */
+
+/* for desktop view */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    box-shadow: 0px 5px 20px 0px rgba(98, 136, 48, 0.667);
+    position: fixed;
+    width: 100%;
+    background: #c1ec23;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 4rem;
+    font-size: 1.8rem;
+}
+.logo{
+    order: 1;
+    font-size: 3rem;
+}
+.navbar a{
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.navbar a:hover{
+    color: rgb(33, 146, 33);
+}
+.main-title{
+    font-family: 'Staatliches', cursive;
+}
+
+/* ####################### showcase style #################### */
+.showcase-area{
+    height: 50vh;
+    background: linear-gradient(rgba(68, 70, 73, 0.192),rgba(60, 75, 44, 0.322)), url("./image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110%;
+    font-size: 1.6rem;
+    color: white;
+    font-size: 1em;
+}
+.showcase-container p{
+    font-size: 1.1em;
+    box-shadow: 0.5px 0.5px 5px -1px #333333;
+    padding: 0.9em 1.1em;
+    color: white;
+}
+.showcase-container h1{
+    font-size: 3em;
+}
+.btn{
+    display: inline-block;
+    padding: 0.8em 2.5em;
+    text-decoration: none;
+    border: 30px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 600;  
+    letter-spacing: 0.1em;
+    box-shadow: 0.5px 0.5px 25px -1px #90d81c79;
+    border-radius: 0.4em;
+}
+.btn-primary{
+    color: #333333;
+    background: #c1ec23;
+    position: relative;
+    transition-property: background;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.13,0,.16,1);
+}
+.btn-primary:hover{
+    background: #333333;
+    color: #c1ec23;
+}
+#about{
+    padding: 50px 0px;
+    background: url(./image/bcgh_00001.jpg);
+    background:linear-gradient(rgba(68, 70, 73, 0.192),rgba(171, 175, 166, 0.322)), url("./image/bcgh_00001.jpg");
+    /* box-shadow: 5px 5px 10px 2px #4b4b4b inset; */
+    border-bottom: 1px solid #c1ec23;
+    border-top: 1px solid #c1ec23;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40em;
+    background:linear-gradient(rgba(127, 129, 133, 0.192),rgba(107, 109, 104, 0.322)), url("./image/bcgh_00001.jpg");
+    border-bottom: 1px solid #b0dd0e;
+    border-top: 1px solid #b0dd0e;
+    box-shadow: 1px 1px 20px -1px #2b2b2b;
+    border-radius: 0.8em;
+    /* box-shadow: 5px 5px 10px 1px #7474742c inset, -5px -5px 10px 1px #5e5e5e2c inset; */
+}
+#about p{
+    font-size: 1.6rem;
+    color: #e4e4e4;
+}
+#about .small{
+    font-size: 1.6rem;
+    color: #e4e4e4;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+.about-img{
+    flex: 1 1 400px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(250%);
+    /* box-shadow: 0.5px 0.5px 10px 1px #5e5e5e2c; */
+    animation: about-img-animation 1.1s cubic-bezier(.6,.23,.33,.82) forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    padding-left: 4em;
+    box-shadow: 0.5px 0.5px 10px 1px #1313132c;
+    transform: translateX(-200%);
+    background: #333333;
+    animation: about-img-animation 1.1s cubic-bezier(.6,.23,.33,.82) forwards;
+}
+.about-text h2{
+    color: #c1ec23;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+.about-img img{
+    display: block;
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8em;
+}
+/* ###################### workout plans ########################## */
+
+#workout{
+    padding: 5rem 0 10rem 0;
+    background:linear-gradient(rgba(68, 70, 73, 0.192),rgba(60, 75, 44, 0.322)), url("./image/bjhbwhite_00001.jpg");
+}
+#workout h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 700;
+}
+
+.workout-plans{
+    display: flex;
+    justify-content: space-between;
+}
+.workout-plans img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+    box-shadow: 1px 1px 20px -1px #333333c9;
+}
+
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.img-container a{
+    font-size: 1.2rem;
+}
+.img-container h3{
+    text-align: center;
+    background: #c0ec23d2;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.7em;
+    font-size: 1.5em;
+    color: #333333;
+    font-weight: 300;
+}
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(70, 70, 70, 0.705);
+    z-index: 1;
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+    transform: sacleY(0);
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 60%;
+}
+.img-content h3{
+    color: #e4e4e4;
+    font-size: 1.7em;
+    text-transform: uppercase;  
+}
+.img-content a{
+    font-size: 1.2rem;
+} 
+.img-container {
+    transition: all 0.4s ease-in-out;
+}
+.img-container:hover{
+    scale: 105%;
+}
+
+/* ###########################  workouts   #################### */
+
+.workout-specs{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px 40px;
+    padding-top: 1.3em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    font-weight: 600;
+    border-top: 1px solid #c1ec23;
+}
+#workouts{
+    padding-bottom: 8em;
+    border-bottom: 1px solid #c1ec23;
+    background:linear-gradient(rgba(68, 70, 73, 0.192),rgba(171, 175, 166, 0.322)), url("./image/bcgh_00001.jpg");
+}
+.workouts-container{
+    margin-top: 1.8em;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.8em;
+    box-shadow: 2px 2px 10px 1 #252525, -2px -2px 10px 1 #252525;
+    padding: 50px 0px 30px 0px;
+    border-bottom: 1px solid #b0dd0e;
+    border-top: 1px solid #b0dd0e;
+    background:linear-gradient(rgba(127, 129, 133, 0.192),rgba(107, 109, 104, 0.322)), url("./image/s.jpg");
+}
+.workouts-container img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    padding: 3em;
+    object-fit: cover;
+    border-radius: 25%;
+    object-position: center;
+}
+.workout-items{
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    box-shadow: 0.5px 0.5px 10px 1px #1313132c;
+    background: #333333;
+}
+.workout-description{
+    margin: auto 1.5rem;
+}
+.workout-title{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color:white;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.2em;
+}
+.workout-description p{
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 400;
+}
+
+.workout-description .workout-price {
+    color: #c1ec23;
+}
+/* ########################  testimonial  ######################### */
+
+#testimonials{
+    padding: 5rem 0rem;
+    background:linear-gradient( rgba(68, 70, 73, 0.192),rgba(60, 75, 44, 0.322)), url("./image/bjhbwhite_00001.jpg");
+}
+.testimonial-title{
+    text-align: center;
+    font-size: 400;
+    color: #333333;
+    font-size: 3rem;
+    padding-top: 0.1em;
+    padding-bottom: 0.6em;
+    font-weight: 600;
+
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.testimonial-container .checked{
+    color: gold;
+}
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #e4e4e4;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 0.8em;
+    width: 20em;
+    border-bottom: 1px solid #c1ec23;
+    border-top: 1px solid #c1ec23;
+    box-shadow: 0.5px 0.5px 20px -1px #333333d0;
+    background:linear-gradient(rgba(127, 129, 133, 0.192),rgba(107, 109, 104, 0.322)), url("./image/bcgh_00001.jpg");
+}
+.customer-photo1 img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: left;
+    margin: auto;
+}
+.customer-photo2 img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+}
+.customer-photo3 img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: right;
+    margin:auto;
+}
+.customer-name{
+    background: #2b2b2b;
+    width: 150px;
+    margin: auto;
+    color: #c1ec23;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+.customer-content{
+    box-shadow: 0.5px 0.5px 20px -1px #4b4b4b;
+    width: 150px;
+    margin: auto;
+}
+/* ########################### contact ############################## */
+
+#contact{
+    padding: 5rem 0;
+    border-top: 1px solid #b0dd0e;
+    background: #333333;
+    background:linear-gradient(rgba(149, 150, 151, 0.192),rgba(53, 56, 48, 0.322)), url("./image/bcgh_00001.jpg");
+}
+.contact-container{
+    display: flex;
+    border-radius: 0.8em;
+    border-bottom: 1px solid #b0dd0e;
+    border-top: 1px solid #b0dd0e;
+    /* box-shadow: 0.5px 0.5px 20px -1px #202020; */
+    box-shadow: 1px 1px 10px #535353, -1px -1px 10px #999999;
+    box-shadow: 6px 6px 30px #3d3d3d, -6px -6px 20px #a5a5a5 inset;
+    background:linear-gradient(rgba(127, 129, 133, 0.192),rgba(51, 51, 51, 0.322)), url("./image/bjhbwhite_00001.jpg");
+    transition: all 0.4s ease-in-out;
+}
+.contact-container:hover{
+    scale: 103%;
+    border-bottom: 5px solid #b0dd0e;
+    border-top: 5px solid #b0dd0e;
+}
+.contact-image{
+    width: 50%;
+    margin-right: 2em;
+    transition: all 0.4s ease-in-out;
+}
+.contact-image img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 0.8em;
+    box-shadow: 1px 1px 20px #535353;
+}
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #333333;
+    font-weight: 500;
+    background: none;
+}
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #333333;
+    padding: 1rem 0;
+    resize: none;
+}
+.form-container h2{
+    font-weight: 600;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.form-container a{
+    font-size: 1.2rem;
+}
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 400;
+    color: #3d3d3d;
+    background: #c1ec23;
+}
+/* ################################# media queries ############################# */
+
+@media(max-width: 800px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar-container input[type='checkbox'],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type='checkbox']{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 36px;
+        width: 40px;
+        margin: auto;
+        position: absolute;
+        top: 23px;
+        left: 18px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .line1{
+        display: block;
+        height: 3px;
+        width: 47%;
+        margin: 0.2em;
+        border-radius: 10px;
+        background: #333;
+
+    }
+    .navbar-container .line2{
+        display: block;
+        height: 3px;
+        width: 47%;
+        margin: 0.2em;
+        border-radius: 10px;
+        background: #333;
+
+    }
+    .navbar-container .line3{
+        display: block;
+        height: 3px;
+        margin: 0.2em;
+        width: 47%;
+        border-radius: 10px;
+        background: #333;
+
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 13% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 87%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 13px 0px rgba(43, 43, 43, 0.397);
+        background:linear-gradient(rgba(127, 129, 133, 0.192),rgba(51, 51, 51, 0.322)), url("./image/bjhbwhite_00001.jpg");
+
+    }
+    .navbar .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        background: #535353;
+        padding: 5px 10px;
+        margin-right: 2em;
+        border-radius: 0.3em;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items li a{
+        color: #c1ec23;
+        transition: transform 0.4s ease-in-out;
+
+    }
+    .menu-items li:hover{
+        background: #252525;
+    }
+    .logo{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 3rem;
+    }
+    .navbar-container input[type='checkbox']:checked ~ .menu-items{
+        transform:translateX(0);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    .about-img{
+        width: 100%;
+        height: auto;
+    }
+    .about-wrapper{
+        height: auto;
+    }
+    .workout-plans{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .img-container{
+        margin-bottom: 1.8em;
+    }
+    .testimonial-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .testimonial-box{
+        margin-bottom: 1.2em;
+    }
+    .showcase-container h1{
+        font-size: 2.2em;
+}
+@media(min-width: 800px) and (max-width: 1150px){
+    .testimonial-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 24em;
+        width: 50m;
+    }
+    .testimonial-box{
+        margin: 3em;
+    }
+    .about-img{
+        width: 100%;
+        height: 30em;
+    }
+    .about-wrapper{
+        display: flex;
+        height: auto;
+    }
+    .btn{
+        display: inline-block;
+        padding: 0.6em 2.2em;
+        text-decoration: none;
+        border: 30px;
+        cursor: pointer;
+        outline: none;
+        margin-top: 1em;
+        text-transform: uppercase;
+        font-weight: 600;  
+        box-shadow: 0.5px 0.5px 25px -1px #90d81c79;
+    border-radius: 0.3em;    
+    }
+    
+
+}
+}
